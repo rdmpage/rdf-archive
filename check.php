@@ -12,7 +12,7 @@ foreach ($files as $directory)
 {
 	if (preg_match('/^\d+$/', $directory))
 	{	
-		echo "\n--$directory\n";
+		//echo "\n--$directory\n";
 				
 		$files = scandir($basedir . '/' . $directory);
 		
