@@ -30,6 +30,14 @@ cd indexfungorum
 tar -cvzf indexfungorum-rdf.tgz rdf/
 ```
 
+## Compress using HDT
+
+~/Development/hdt-cpp/hdt-lib/tools/rdf2hdt indexfungorum.nt indexfungorum.hdt
+
+Total processing time: Clock(3 min 13 sec 72 ms 924 us)  User(2 min 41 sec 250 ms 380 us)  System(5 sec 434 ms 840 us)
+
+
+
 
 
 

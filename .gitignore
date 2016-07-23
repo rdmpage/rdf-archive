@@ -1,10 +1,17 @@
 
-if.nt
+# indexfungorum
 
 indexfungorum/rdf
 indexfungorum/indexfungorum-rdf.tgz
+indexfungorum.nt
+
+# indexfungorum hdt extra files
+indexfungorum.hdt.hdtcache
+indexfungorum.hdt.index
+
 
 ion/html
 ion/rdf
+ion/rdf-extra
 
 ipni/rdf

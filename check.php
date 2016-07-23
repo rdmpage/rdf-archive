@@ -4,8 +4,11 @@
 
 require_once (dirname(__FILE__) . '/vendor/arc2/ARC2.php');
 	
+$count = 0;
+$error_count = 0;
 
 $basedir = dirname(__FILE__) . '/indexfungorum/rdf';
+$basedir = dirname(__FILE__) . '/ion/rdf';
 
 $files = scandir($basedir);
 foreach ($files as $directory)
@@ -20,6 +23,8 @@ foreach ($files as $directory)
 		{
 			if (preg_match('/\.xml$/', $filename))
 			{	
+				$count++;
+				
 				$id = str_replace('.xml', '', $filename);
 			
 				$xml = file_get_contents($basedir . '/' . $directory . '/' . $filename);
@@ -30,13 +35,15 @@ foreach ($files as $directory)
 				}
 				else
 				{
-					echo $id . "\n";
+					echo "File $id is not XML\n";
+					$error_count++;
 				}
 			}
 		}
 	}
 }
 
+echo "$count files processed, $error_count errors found.\n";
 
 ?>
 
