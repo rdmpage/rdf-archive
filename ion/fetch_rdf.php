@@ -1606,9 +1606,13 @@ $ids=array(
 );
 
 
+$start = 4501000;
+$stop  = 4505999;
+
 $count = 0;
 
-foreach ($ids as $id)
+//foreach ($ids as $id)
+for ($id = $start; $id <= $stop; $id++)
 {
 	echo $id . "\n";
 	
