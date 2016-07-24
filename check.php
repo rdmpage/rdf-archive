@@ -9,6 +9,7 @@ $error_count = 0;
 
 $basedir = dirname(__FILE__) . '/indexfungorum/rdf';
 $basedir = dirname(__FILE__) . '/ion/rdf';
+$basedir = dirname(__FILE__) . '/ipni/rdf';
 
 $files = scandir($basedir);
 foreach ($files as $directory)
