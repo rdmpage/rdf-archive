@@ -38,50 +38,30 @@ function rdf_to_triples($xml)
 
 //----------------------------------------------------------------------------------------
 
+$basedir = dirname(__FILE__);
+$directory = 'ipni/rdf';
+$filename = '412/412947-1.xml';
 
-$basedir = dirname(__FILE__) . '/indexfungorum/rdf';
-$basedir = dirname(__FILE__) . '/ipni/rdf';
-
-$files = scandir($basedir);
-foreach ($files as $directory)
-{
-	if (preg_match('/^\d+$/', $directory))
-	{	
-		//echo "\n$directory\n";
-				
-		$files = scandir($basedir . '/' . $directory);
-		
-		foreach ($files as $filename)
-		{
-			if (preg_match('/\.xml$/', $filename))
-			{	
-				//echo "." . str_replace('.xml', '', $filename) . "\n";
-				//echo '.';
 			
-				$xml = file_get_contents($basedir . '/' . $directory . '/' . $filename);
-				
-				if (preg_match('/^<\?xml/', $xml))
-				{
-					// do stuff
-					// clean
-					$xml = fix_rdf($xml);
-					
-					// to N-triples
-					rdf_to_triples($xml);
-					
-					
-				}
-				else
-				{
-					echo $xml;
-					exit();
-					echo $filename . "\n";
-				}
-			}
-		}
-	}
-}
+$xml = file_get_contents($basedir . '/' . $directory . '/' . $filename);
 
+if (preg_match('/^<\?xml/', $xml))
+{
+	// do stuff
+	// clean
+	$xml = fix_rdf($xml);
+	
+	// to N-triples
+	rdf_to_triples($xml);
+	
+	
+}
+else
+{
+	echo $xml;
+	exit();
+	echo $filename . "\n";
+}
 
 ?>
 

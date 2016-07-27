@@ -14,4 +14,10 @@ ion/html
 ion/rdf
 ion/rdf-extra
 
+#ipni
+
 ipni/rdf
+
+ipni.nt
+ipni.hdt.hdtcache
+ipni.hdt.index
