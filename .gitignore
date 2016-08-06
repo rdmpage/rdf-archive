@@ -1,6 +1,7 @@
 
 # indexfungorum
 
+indexfungorum/nt
 indexfungorum/rdf
 indexfungorum/indexfungorum-rdf.tgz
 indexfungorum.nt
@@ -21,3 +22,7 @@ ipni/rdf
 ipni.nt
 ipni.hdt.hdtcache
 ipni.hdt.index
+
+#algaebase
+
+algaebase/rdf
