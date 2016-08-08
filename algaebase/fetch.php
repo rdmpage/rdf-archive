@@ -104,8 +104,18 @@ $start  =  80000;
 $stop 	= 100000;
 
 $start  =  60000;
+$start  =  73530;
 $stop 	=  80000;
 
+
+$start  =  40000;
+$stop 	=  60000;
+
+$start  =  20000;
+$stop 	=  40000;
+
+$start  =  16801;
+$stop 	=  20000;
 
 
 $count = 0;
